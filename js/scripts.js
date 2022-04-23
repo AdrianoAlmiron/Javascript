@@ -1,124 +1,40 @@
 
-
- class Producto {
-    constructor(precio, moneda){
-    this.precio = parseFloat(precio);
-    this.moneda = moneda;
-    
+function pesosDolares(valNum) {
+  document.getElementById("inputDolares").value=(valNum/147).toFixed(2);
+  document.getElementById("inputEuro").value=(valNum/197).toFixed(2);
+  document.getElementById("inputReales").value=(valNum/7.5).toFixed(2);
 }
-
-sumarIva(){
-  return this.precio * 1.21;
+function dolaresPesos(valNum) {
+  document.getElementById("inputEuros").value=(valNum*145).toFixed(2);
+  document.getElementById("inputEuro").value=(valNum/0.9).toFixed(2);
+  document.getElementById("inputReales").value=(valNum/4.8).toFixed(2);
 }
-cuotas3(){
-  return this.precio / 3 * 1.21;
+function pesoEuro(valNum) {
+  document.getElementById("inputEuros").value=(valNum*197).toFixed(2);
+  document.getElementById("inputDolares").value=(valNum*0.9).toFixed(2);
+  document.getElementById("inputReales").value=(valNum/5.9).toFixed(2);
 }
-cuotas6(){
-  return this.precio / 6 * 1.21;
-}
-cuotas12(){
-  return this.precio / 12 * 1.21;
-}
-dolar(){
-  return this.precio * 1.21 / 112.17;
+function pesoReal(valNum) {
+  document.getElementById("inputEuros").value=(valNum*7.5).toFixed(2);
+  document.getElementById("inputDolares").value=(valNum*0.2).toFixed(2);
+  document.getElementById("inputEuro").value=(valNum*0.2).toFixed(2);
 }
 
 
-}
-const elemento = document.getElementById("Mensaje");
-const elemento2 = document.getElementById("Mensaje2");
-const elemento3 = document.getElementById("Mensaje3");
-const elemento4 = document.getElementById("Mensaje4");
-const elemento5 = document.getElementById("Mensaje5");
-const elemento6 = document.getElementById("Mensaje6");
+// Log in
 
-let arrayProductos = [];
-do{
-  var comprobacion = prompt ("ingrese Valor del producto a calcular o OK para terminar");
-  if (comprobacion === "Ok"|| comprobacion === "OK" || comprobacion === "ok"){
-    break;
-  }else{
-    preciop = comprobacion;
-    var monedap = prompt ("ingrese en que moneda");
-    arrayProductos.push(new Producto(preciop, monedap));
+function guardarDatos() {
+  localStorage.nombre = document.getElementById("nombre").value;
+  localStorage.password = document.getElementById("password").value;
+}
+
+function recuperarDatos() {
+  if ((localStorage.nombre != undefined) && (localStorage.password != undefined)) {
+      document.getElementById("datos").innerHTML = "Nombre: " + localStorage.nombre + " Password: " + localStorage.password;
+  } else {
+      document.getElementById("datos").innerHTML = "No has introducido tu nombre y tu password";
   }
 }
-
-while (comprobacion != "Ok" || comprobacion != "OK" || comprobacion != "ok")
-
-console.log(arrayProductos);
-
-for (var producto of arrayProductos){
-  elemento.innerHTML = "$ " + producto.precio;
-  elemento2.innerHTML = "$ " + producto.sumarIva();
-  elemento3.innerHTML = "$ " + producto.cuotas3();
-  elemento4.innerHTML = "$ " + producto.cuotas6();
-  elemento5.innerHTML = "$ " + producto.cuotas12();
-  elemento6.innerHTML = "u$s " + producto.dolar();
- 
-
-}
-
-
-function ConfirmDemo() {
-  var mensaje = confirm("¿Esta Correcto los valores?");
-  
-  if (mensaje) {
-  alert("u$s" + producto.dolar());
-  }
-  
-  else {
-  alert("¡Haz denegado el mensaje!");
-  }
-}
-
-window.addEventListener('DOMContentLoaded', event => {
-
-  // Navbar
-  let navbarShrink = function () {
-      const navbarCollapsible = document.body.querySelector('#mainNav');
-      if (!navbarCollapsible) {
-          return;
-      }
-      if (window.scrollY === 0) {
-          navbarCollapsible.classList.remove('navbar-shrink')
-      } else {
-          navbarCollapsible.classList.add('navbar-shrink')
-      }
-
-  };
-
-   
-  navbarShrink();
-
-  //scroll navbar
-  document.addEventListener('scroll', navbarShrink);
-
-  // Activate Bootstrap scrollspy on the main nav element
-  const mainNav = document.body.querySelector('#mainNav');
-  if (mainNav) {
-      new bootstrap.ScrollSpy(document.body, {
-          target: '#mainNav',
-          offset: 74,
-      });
-  };
-
-  // Collapse responsive navbar when toggler is visible
-  const navbarToggler = document.body.querySelector('.navbar-toggler');
-  const responsiveNavItems = [].slice.call(
-      document.querySelectorAll('#navbarResponsive .nav-link')
-  );
-  responsiveNavItems.map(function (responsiveNavItem) {
-      responsiveNavItem.addEventListener('click', () => {
-          if (window.getComputedStyle(navbarToggler).display !== 'none') {
-              navbarToggler.click();
-          }
-      });
-  });
-
-});
-
-
 
 
 

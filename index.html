@@ -35,12 +35,18 @@
             </div>
         </nav>
         <!-- Page content-->
-
-          <!-- Alertas-->
-        <div class="alert alert-success" role="alert">
-            Excelente! , Gracias por elejirnos!
-          </div>
-
+        <div class="Login">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" />
+        
+        <label for="nombre">Password:</label>
+        <input type="text" id="password" />
+        
+        <input type="button" onclick="guardarDatos()" value="Guardar datos" />
+         
+        <p id="datos">Pulsa para ver tu nombre y tu password.</p>
+        <input type="button" onclick="recuperarDatos()" value="Recuperar datos" />
+        </div>
         <!-- Carusel de imagenes-->
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -90,68 +96,33 @@
             </div>
         </div>
 
-        <form class="row row-cols-lg-auto g-3 align-items-center">
-            <div class="col-12">
-              <label class="visually-hidden" for="inlineFormInputGroupUsername">Change</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Monto">
-              </div>
-            </div>
-          
-            <div class="col-12">
-              <label class="visually-hidden" for="inlineFormSelectPref">Moneda</label>
-              <select class="form-select" id="inlineFormSelectPref">
-                <option selected>Que Moneda?</option>
-                <option value="1">Dolar</option>
-                <option value="2">Euro</option>
-                <option value="3">Bitcoin</option>
-              </select>
-            </div>
-          
-            <div class="col-12">
-              <div class="form-check">
-                <label class="form-check-label" for="inlineFormCheck">
-                    1 EUR = 1,08USD / 1 USD = 0,99EUR
-                </label>
-              </div>
-            </div>
-          
-            <div class="col-12" id="table2">
-              <button  class="btn btn-primary" onclick="ConfirmDemo();">Hacer Cambio</button>
-            </div>
-          </form>
+<!--Campo de CAMBIO-->
+<div class="divisa">
+    <div class="nombre">Pesos ($)</div>
+    
+    <input id="inputEuros" type="number" placeholder="Peso" oninput="pesosDolares(this.value)" onchange="pesosDolares(this.value)">
+  </div>
 
-        
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">valor s/IVA</th>
-              <th scope="col">valor c/IVA</th>
-              <th scope="col">3 Cuotas</th>
-              <th scope="col">6 Cuotas</th>
-              <th scope="col">12 Cuotas</th>
-              <th scope="col">Dolar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Resultado</th>
-              <td id="Mensaje">-</td>
-              <td id="Mensaje2">-</td>
-              <td id="Mensaje3">-</td>
-              <td id="Mensaje4">-</td>
-              <td id="Mensaje5">-</td>
-              <td id="Mensaje6">U$s</td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="divisa">
+    <div class="nombre">Dólares (u$s)</div>
+    <input id="inputDolares" type="number" step="0.25" placeholder="Dolares" oninput="dolaresPesos(this.value)" onchange="dolaresPesos(this.value)">
+  </div>
+
+  <div class="divisa">
+    <div class="nombre">Euro</div>
+    <input id="inputEuro" type="number" step="0.25" placeholder="Euro" oninput="pesoEuro(this.value)" onchange="pesoEuro(this.value)">
+  </div>
+
+  <div class="divisa">
+    <div class="nombre">Real</div> 
+    <input id="inputReales" type="number" step="0.25" placeholder="Reales" oninput="pesoReal(this.value)" onchange="pesoReal(this.value)">
+  </div>
 <!-- Services-->
 <section class="page-section" id="services">
   <div class="container">
       <div class="text-center">
-          <h2 class="section-heading text-uppercase">Services</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h2 class="section-heading text-uppercase">Crypto</h2>
+          <h3 class="section-subheading text-muted">All Crypto.</h3>
       </div>
       <div class="row text-center">
           <div class="col-md-4">
@@ -159,7 +130,7 @@
                   <i class="fas fa-circle fa-stack-2x text-primary"></i>
                   <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="my-3">E-Commerce</h4>
+              <h4 class="my-3">Bitcoin</h4>
               <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
           </div>
           <div class="col-md-4">
@@ -167,7 +138,7 @@
                   <i class="fas fa-circle fa-stack-2x text-primary"></i>
                   <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="my-3">Responsive Design</h4>
+              <h4 class="my-3">Etherium</h4>
               <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
           </div>
           <div class="col-md-4">
@@ -175,7 +146,7 @@
                   <i class="fas fa-circle fa-stack-2x text-primary"></i>
                   <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="my-3">Web Security</h4>
+              <h4 class="my-3">NFT</h4>
               <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
           </div>
       </div>
@@ -185,7 +156,7 @@
 <section class="page-section bg-light" id="portfolio">
   <div class="container">
       <div class="text-center">
-          <h2 class="section-heading text-uppercase">Que trabajaos realizamos</h2>
+          <h2 class="section-heading text-uppercase">About</h2>
           <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
       </div>
       <div class="row">
@@ -196,11 +167,11 @@
                       <div class="portfolio-hover">
                           <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                       </div>
-                      <img class="img-fluid" src="assets/img/8.jpg" alt="..." />
+                      <img class="img-fluid" src="img/1 (1).jpg" alt="..." />
                   </a>
                   <div class="portfolio-caption">
-                      <div class="portfolio-caption-heading">Cambio de Display</div>
-                      <div class="portfolio-caption-subheading text-muted">Originales & Genericos.</div>
+                      <div class="portfolio-caption-heading">Prestamos</div>
+                      <div class="portfolio-caption-subheading text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, repellendus?</div>
                   </div>
               </div>
           </div>
@@ -211,11 +182,11 @@
                       <div class="portfolio-hover">
                           <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                       </div>
-                      <img class="img-fluid" src="assets/img/6.jpg" alt="..." />
+                      <img class="img-fluid" src="img/1 (2).jpg" alt="..." />
                   </a>
                   <div class="portfolio-caption">
-                      <div class="portfolio-caption-heading">Reparacion de accesorios</div>
-                      <div class="portfolio-caption-subheading text-muted">Audriculares - Cargadores y mas...</div>
+                      <div class="portfolio-caption-heading">Viajas? Consulta el cambio</div>
+                      <div class="portfolio-caption-subheading text-muted">Dolares - Euro - Libra</div>
                   </div>
               </div>
           </div>
@@ -226,83 +197,17 @@
                       <div class="portfolio-hover">
                           <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                       </div>
-                      <img class="img-fluid" src="assets/img/5.jpg" alt="..." />
+                      <img class="img-fluid" src="img/1 (3).jpg" alt="..." />
                   </a>
                   <div class="portfolio-caption">
-                      <div class="portfolio-caption-heading">Placas Madres</div>
-                      <div class="portfolio-caption-subheading text-muted">Limpieza - Inundacion y mas...</div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-              <!-- Portfolio item 4-->
-              <div class="portfolio-item">
-                  <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                      <div class="portfolio-hover">
-                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                      </div>
-                      <img class="img-fluid" src="assets/img/9.jpg" alt="..." />
-                  </a>
-                  <div class="portfolio-caption">
-                      <div class="portfolio-caption-heading">Lines</div>
-                      <div class="portfolio-caption-subheading text-muted">Branding</div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-              <!-- Portfolio item 5-->
-              <div class="portfolio-item">
-                  <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                      <div class="portfolio-hover">
-                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                      </div>
-                      <img class="img-fluid" src="assets/img/7.jpg" alt="..." />
-                  </a>
-                  <div class="portfolio-caption">
-                      <div class="portfolio-caption-heading">Southwest</div>
-                      <div class="portfolio-caption-subheading text-muted">Website Design</div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-              <!-- Portfolio item 6-->
-              <div class="portfolio-item">
-                  <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                      <div class="portfolio-hover">
-                          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                      </div>
-                      <img class="img-fluid" src="assets/img/logo.png" alt="..." />
-                  </a>
-                  <div class="portfolio-caption">
-                      <div class="portfolio-caption-heading">Window</div>
-                      <div class="portfolio-caption-subheading text-muted">Photography</div>
+                      <div class="portfolio-caption-heading">Todo sobre CRYPTO</div>
+                      <div class="portfolio-caption-subheading text-muted">bitcoin - etherium - cortana</div>
                   </div>
               </div>
           </div>
       </div>
   </div>
 </section>
-
-<!-- Clients-->
-<div class="py-5">
-  <div class="container">
-      <div class="row align-items-center">
-          <div class="col-md-3 col-sm-6 my-3">
-              <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." aria-label="Microsoft Logo" /></a>
-          </div>
-          <div class="col-md-3 col-sm-6 my-3">
-              <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." aria-label="Google Logo" /></a>
-          </div>
-          <div class="col-md-3 col-sm-6 my-3">
-              <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." aria-label="Facebook Logo" /></a>
-          </div>
-          <div class="col-md-3 col-sm-6 my-3">
-              <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." aria-label="IBM Logo" /></a>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- Contact-->
 <section class="page-section" id="contact">
   <div class="container">
       <div class="text-center">
@@ -489,111 +394,7 @@
       </div>
   </div>
 </div>
-<!-- Portfolio item 4 modal popup-->
-<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-          <div class="container">
-              <div class="row justify-content-center">
-                  <div class="col-lg-8">
-                      <div class="modal-body">
-                          <!-- Project details-->
-                          <h2 class="text-uppercase">Project Name</h2>
-                          <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                          <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
-                          <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                          <ul class="list-inline">
-                              <li>
-                                  <strong>Client:</strong>
-                                  Lines
-                              </li>
-                              <li>
-                                  <strong>Category:</strong>
-                                  Branding
-                              </li>
-                          </ul>
-                          <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                              <i class="fas fa-xmark me-1"></i>
-                              Close Project
-                          </button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- Portfolio item 5 modal popup-->
-<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-          <div class="container">
-              <div class="row justify-content-center">
-                  <div class="col-lg-8">
-                      <div class="modal-body">
-                          <!-- Project details-->
-                          <h2 class="text-uppercase">Project Name</h2>
-                          <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                          <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
-                          <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                          <ul class="list-inline">
-                              <li>
-                                  <strong>Client:</strong>
-                                  Southwest
-                              </li>
-                              <li>
-                                  <strong>Category:</strong>
-                                  Website Design
-                              </li>
-                          </ul>
-                          <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                              <i class="fas fa-xmark me-1"></i>
-                              Close Project
-                          </button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- Portfolio item 6 modal popup-->
-<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-          <div class="container">
-              <div class="row justify-content-center">
-                  <div class="col-lg-8">
-                      <div class="modal-body">
-                          <!-- Project details-->
-                          <h2 class="text-uppercase">Project Name</h2>
-                          <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                          <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
-                          <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                          <ul class="list-inline">
-                              <li>
-                                  <strong>Client:</strong>
-                                  Window
-                              </li>
-                              <li>
-                                  <strong>Category:</strong>
-                                  Photography
-                              </li>
-                          </ul>
-                          <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                              <i class="fas fa-xmark me-1"></i>
-                              Close Project
-                          </button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
+
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->

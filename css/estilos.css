@@ -2,7 +2,7 @@
 
 :root {
   --bs-blue: #0d6efd;
-  --bs-indigo: #6610f2;
+  --bs-indigo: #67469b;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
@@ -51,7 +51,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  
 }
 
 *,
@@ -68,15 +68,34 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: sans-serif;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background: rgb(182,182,182);
+  background: linear-gradient(356deg, rgba(182,182,182,1) 0%, rgba(249,251,255,1) 71%);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.divisa,
+.login {
+  max-width:  280px;
+  margin: 25px auto;
+  display: grid;                    /* cuadrícula */
+  grid-template-columns: 50% 50%;   /* 2 columnas iguales */
+  margin-bottom: 15px;
+  background: rgb(37, 169, 209); 
+  color: rgb(0, 0, 0);
+}
+
+.nombre, .valor{
+  padding: 5px;
+  font-size: 16px;
+  align-self: center;  /* alinear elemento al centro en altura */
+  text-align: center;  /* alinear texto al centro en ancho */
 }
 
 hr {
@@ -340,6 +359,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  text-align: center;
 }
 
 button,
