@@ -13,40 +13,45 @@
     </head>
     <body>
         <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">Web de Cambio de todo tipo de monedas!</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Idiomas</a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Español</a></li>
-                                <li><a class="dropdown-item" href="#">Ingles</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#">Portugues</a></li>
-                            </ul>
-                        </li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Web Exchange</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Crypto
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Bitcoin</a></li>
+                      <li><a class="dropdown-item" href="#">Etherium</a></li>
+                      <li><a class="dropdown-item" href="#">NFT</a></li>
                     </ul>
-                </div>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                    <label for="nombre"></label>
+                  <input class="form-control me-2" type="search" placeholder="User" id="nombre" aria-label="Search">
+                  <label for="nombre"></label>
+                  <input class="form-control me-2" type="search" placeholder="Password" id="password" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit" onclick="guardarDatos()" value="Guardar datos">Login</button>
+                  <button class="btn btn btn-outline-danger" type="submit" onclick="borrarDatos()" value="Guardar datos">Logout</button>
+                </form>
+              </div>
             </div>
         </nav>
-        <!-- Page content-->
-        <div class="Login">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" />
+        <!--<p id="datos">Pulsa para ver tu nombre y tu password.</p><input type="button" onclick="recuperarDatos()" value="Recuperar datos" />-->
         
-        <label for="nombre">Password:</label>
-        <input type="text" id="password" />
-        
-        <input type="button" onclick="guardarDatos()" value="Guardar datos" />
-         
-        <p id="datos">Pulsa para ver tu nombre y tu password.</p>
-        <input type="button" onclick="recuperarDatos()" value="Recuperar datos" />
-        </div>
+       
         <!-- Carusel de imagenes-->
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -288,7 +293,7 @@
       </div>
   </div>
 </footer>
-<!-- Portfolio Modals-->
+
 <!-- Portfolio item 1 modal popup-->
 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
