@@ -10,12 +10,24 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/estilos.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <!--Floating WhatsApp css-->
+        <link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
+        <!--Floating WhatsApp javascript-->
+        <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+        <script src="./js/Reloj.js"></script>
     </head>
-    <body>
+    <body onload="mueveReloj()">
+        <!--Whatsapp WEb-->
+        <div id="WAButton"></div>
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-warning">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Web Exchange</a>
+              <form name="form_reloj">
+                <input type="text" name="reloj" size="10" style="background-color : Black; color : White; font-family : Verdana, Arial, Helvetica; font-size : 8pt; text-align : center;">
+                </form>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -50,8 +62,6 @@
             </div>
         </nav>
         <!--<p id="datos">Pulsa para ver tu nombre y tu password.</p><input type="button" onclick="recuperarDatos()" value="Recuperar datos" />-->
-        
-       
         <!-- Carusel de imagenes-->
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -100,7 +110,6 @@
                 <p>safety and seriousness</p>
             </div>
         </div>
-
 <!--Campo de CAMBIO-->
 <div class="divisa">
     <div class="nombre">Pesos ($)</div>
