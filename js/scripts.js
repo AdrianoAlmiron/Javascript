@@ -42,8 +42,8 @@ $(function() {
   $('#WAButton').floatingWhatsApp({
     phone: '1231231231', 
    
-    headerTitle: 'Chat with us on WhatsApp!', 
-    popupMessage: 'Hello, how can we help you?', 
+    headerTitle: 'Charlamos?', 
+    popupMessage: 'Hola, en que puedo ayudarte?', 
     showPopup: true, 
     buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
     position: "right"    
