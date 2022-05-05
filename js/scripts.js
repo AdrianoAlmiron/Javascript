@@ -23,10 +23,26 @@ function pesoReal(valNum) {
 
 
 // Log in
+Toastify({
+  text: "This is a toast",
+  duration: 3000,
+  destination: "https://github.com/apvarun/toastify-js",
+  newWindow: true,
+  close: true,
+  gravity: "top", // `top` or `bottom`
+  position: "left", // `left`, `center` or `right`
+  stopOnFocus: true, // Prevents dismissing of toast on hover
+  style: {
+    background: "linear-gradient(to right, #00b09b, #96c93d)",
+  },
+  onClick: function(){} // Callback after click
+}).showToast();
 
 function guardarDatos() {
   localStorage.nombre = document.getElementById("nombre").value;
   localStorage.password = document.getElementById("password").value;
+  showToast();
+  
 }
 
 function recuperarDatos() {
@@ -41,9 +57,8 @@ function recuperarDatos() {
 $(function() {
   $('#WAButton').floatingWhatsApp({
     phone: '1231231231', 
-   
-    headerTitle: 'Chat with us on WhatsApp!', 
-    popupMessage: 'Hello, how can we help you?', 
+    headerTitle: 'Puedes enviarnos un Whatsapp', 
+    popupMessage: 'Hola, en que puedo ayudarte?', 
     showPopup: true, 
     buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
     position: "right"    
