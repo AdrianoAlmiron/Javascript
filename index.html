@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
@@ -112,6 +113,7 @@
             </div>
         </div>
 <!--Campo de CAMBIO-->
+
 <div class="divisa">
     <div class="nombre">Pesos ($)</div>
     
@@ -308,31 +310,156 @@
 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
           <div class="container">
               <div class="row justify-content-center">
                   <div class="col-lg-8">
-                      <div class="modal-body">
-                          <!-- Project details-->
-                          <h2 class="text-uppercase">Project Name</h2>
-                          <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                          <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
-                          <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                          <ul class="list-inline">
-                              <li>
-                                  <strong>Client:</strong>
-                                  Threads
-                              </li>
-                              <li>
-                                  <strong>Category:</strong>
-                                  Illustration
-                              </li>
-                          </ul>
-                          <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                              <i class="fas fa-xmark me-1"></i>
-                              Close Project
-                          </button>
-                      </div>
+                        <img src="img/pngwing.com (3).png" alt="" class="conversor-imagen">
+                        <h1>Conversor de moneda</h1>
+                        <p>Escoje la moneda y la cantidad para realizar la conversion</p>
+                        
+                        <div class="container">
+                            <div class="moneda">
+                                <select id="moneda-uno">
+                                    <option value="AED">AED</option>
+                                    <option value="ARS">ARS</option>
+                                    <option value="AUD">AUD</option>
+                                    <option value="BGN">BGN</option>
+                                    <option value="BRL">BRL</option>
+                                    <option value="BSD">BSD</option>
+                                    <option value="CAD">CAD</option>
+                                    <option value="CHF">CHF</option>
+                                    <option value="CLP">CLP</option>
+                                    <option value="CNY">CNY</option>
+                                    <option value="COP">COP</option>
+                                    <option value="CZK">CZK</option>
+                                    <option value="DKK">DKK</option>
+                                    <option value="DOP">DOP</option>
+                                    <option value="EGP">EGP</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="FJD">FJD</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="GTQ">GTQ</option>
+                                    <option value="HKD">HKD</option>
+                                    <option value="HRK">HRK</option>
+                                    <option value="HUF">HUF</option>
+                                    <option value="IDR">IDR</option>
+                                    <option value="ILS">ILS</option>
+                                    <option value="INR">INR</option>
+                                    <option value="ISK">ISK</option>
+                                    <option value="JPY">JPY</option>
+                                    <option value="KRW">KRW</option>
+                                    <option value="KZT">KZT</option>
+                                    <option value="MXN">MXN</option>
+                                    <option value="MYR">MYR</option>
+                                    <option value="NOK">NOK</option>
+                                    <option value="NZD">NZD</option>
+                                    <option value="PAB">PAB</option>
+                                    <option value="PEN">PEN</option>
+                                    <option value="PHP">PHP</option>
+                                    <option value="PKR">PKR</option>
+                                    <option value="PLN">PLN</option>
+                                    <option value="PYG">PYG</option>
+                                    <option value="RON">RON</option>
+                                    <option value="RUB">RUB</option>
+                                    <option value="SAR">SAR</option>
+                                    <option value="SEK">SEK</option>
+                                    <option value="SGD">SGD</option>
+                                    <option value="THB">THB</option>
+                                    <option value="TRY">TRY</option>
+                                    <option value="TWD">TWD</option>
+                                    <option value="UAH">UAH</option>
+                                    <option value="USD" selected>USD</option>
+                                    <option value="UYU">UYU</option>
+                                    <option value="VND">VND</option>
+                                    <option value="ZAR">ZAR</option>
+                    
+                                </select>
+                    
+                                <input 
+                                type="number" 
+                                id="cantidad-uno" 
+                                placeholder="0"  
+                                value="1"
+                                >
+                    
+                            </div>
+                    
+                            <div class="taza-cambio-container">
+                                <button class="btn" id="taza">
+                                    cambio
+                                </button>
+                    
+                                <div class="cambio" id="cambio"></div>
+                    
+                            </div>
+                    
+                            <div class="moneda">
+                                <select id="moneda-dos">
+                                    <option value="AED">AED</option>
+                                    <option value="ARS">ARS</option>
+                                    <option value="AUD">AUD</option>
+                                    <option value="BGN">BGN</option>
+                                    <option value="BRL">BRL</option>
+                                    <option value="BSD">BSD</option>
+                                    <option value="CAD">CAD</option>
+                                    <option value="CHF">CHF</option>
+                                    <option value="CLP">CLP</option>
+                                    <option value="CNY">CNY</option>
+                                    <option value="COP">COP</option>
+                                    <option value="CZK">CZK</option>
+                                    <option value="DKK">DKK</option>
+                                    <option value="DOP">DOP</option>
+                                    <option value="EGP">EGP</option>
+                                    <option value="EUR" selected>EUR</option>
+                                    <option value="FJD">FJD</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="GTQ">GTQ</option>
+                                    <option value="HKD">HKD</option>
+                                    <option value="HRK">HRK</option>
+                                    <option value="HUF">HUF</option>
+                                    <option value="IDR">IDR</option>
+                                    <option value="ILS">ILS</option>
+                                    <option value="INR">INR</option>
+                                    <option value="ISK">ISK</option>
+                                    <option value="JPY">JPY</option>
+                                    <option value="KRW">KRW</option>
+                                    <option value="KZT">KZT</option>
+                                    <option value="MXN">MXN</option>
+                                    <option value="MYR">MYR</option>
+                                    <option value="NOK">NOK</option>
+                                    <option value="NZD">NZD</option>
+                                    <option value="PAB">PAB</option>
+                                    <option value="PEN">PEN</option>
+                                    <option value="PHP">PHP</option>
+                                    <option value="PKR">PKR</option>
+                                    <option value="PLN">PLN</option>
+                                    <option value="PYG">PYG</option>
+                                    <option value="RON">RON</option>
+                                    <option value="RUB">RUB</option>
+                                    <option value="SAR">SAR</option>
+                                    <option value="SEK">SEK</option>
+                                    <option value="SGD">SGD</option>
+                                    <option value="THB">THB</option>
+                                    <option value="TRY">TRY</option>
+                                    <option value="TWD">TWD</option>
+                                    <option value="UAH">UAH</option>
+                                    <option value="USD">USD</option>
+                                    <option value="UYU">UYU</option>
+                                    <option value="VND">VND</option>
+                                    <option value="ZAR">ZAR</option>
+                    
+                                </select>
+                    
+                                <input 
+                                type="number" 
+                                id="cantidad-dos" 
+                                placeholder="0"  
+                                >
+                    
+                            </div>
+                        </div>
+                    
+                    <script src="./js/Moneda.js"></script>
                   </div>
               </div>
           </div>
@@ -343,31 +470,21 @@
 <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+          
           <div class="container">
               <div class="row justify-content-center">
                   <div class="col-lg-8">
-                      <div class="modal-body">
-                          <!-- Project details-->
-                          <h2 class="text-uppercase">Project Name</h2>
-                          <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                          <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
-                          <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                          <ul class="list-inline">
-                              <li>
-                                  <strong>Client:</strong>
-                                  Explore
-                              </li>
-                              <li>
-                                  <strong>Category:</strong>
-                                  Graphic Design
-                              </li>
-                          </ul>
-                          <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                              <i class="fas fa-xmark me-1"></i>
-                              Close Project
-                          </button>
-                      </div>
+                    <main>
+                        1 Bitcoin
+                        <div class="coin-container" id="bitcoin">
+                            <div class="coin bitcoin-item">₿</div>
+                        </div>
+                        =
+                        <span id="usd-amount"></span>
+                        <div class="coin-container" id="dollar">
+                        </div>
+                    </main>
+                    <script src="./js/bitcoin.js" defer></script>
                   </div>
               </div>
           </div>
@@ -409,6 +526,7 @@
       </div>
   </div>
 </div>
+<script src="Moneda.js"></script>
 
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
