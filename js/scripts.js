@@ -52,15 +52,4 @@ function recuperarDatos() {
       document.getElementById("datos").innerHTML = "No has introducido tu nombre y tu password";
   }
 }
-//whatsapp
 
-$(function() {
-  $('#WAButton').floatingWhatsApp({
-    phone: '1231231231', 
-    headerTitle: 'Puedes enviarnos un Whatsapp', 
-    popupMessage: 'Hola, en que puedo ayudarte?', 
-    showPopup: true, 
-    buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
-    position: "right"    
-  });
-});
