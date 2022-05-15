@@ -46,9 +46,9 @@
                       Crypto
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Bitcoin</a></li>
-                      <li><a class="dropdown-item" href="#">Etherium</a></li>
-                      <li><a class="dropdown-item" href="#">NFT</a></li>
+                      <li><a class="dropdown-item" href="#bitcoin">Bitcoin</a></li>
+                      <li><a class="dropdown-item" href="#etherium">Etherium</a></li>
+                      <li><a class="dropdown-item" href="#nft">NFT</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -63,13 +63,11 @@
               </div>
             </div>
         </nav>
-        <!--<p id="datos">Pulsa para ver tu nombre y tu password.</p><input type="button" onclick="recuperarDatos()" value="Recuperar datos" />-->
-        <!-- Carusel de imagenes-->
+         <!-- Carusel de imagenes-->
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -77,13 +75,6 @@
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Cambio y valores de todas las cryptomonedas</h5>
                   <p>Noticias y todos los valores actualizados al momento.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="./img/cambio.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Consulta el cambio de cualquier moneda</h5>
-                  <p>Calculadora en el momento con el precio actual.</p>
                 </div>
               </div>
               <div class="carousel-item">
@@ -112,34 +103,13 @@
                 <p>safety and seriousness</p>
             </div>
         </div>
-<!--Campo de CAMBIO-->
 
-<div class="divisa">
-    <div class="nombre">Pesos ($)</div>
-    
-    <input id="inputEuros" type="number" placeholder="Peso" oninput="pesosDolares(this.value)" onchange="pesosDolares(this.value)">
-  </div>
-
-  <div class="divisa">
-    <div class="nombre">Dólares (u$s)</div>
-    <input id="inputDolares" type="number" step="0.25" placeholder="Dolares" oninput="dolaresPesos(this.value)" onchange="dolaresPesos(this.value)">
-  </div>
-
-  <div class="divisa">
-    <div class="nombre">Euro</div>
-    <input id="inputEuro" type="number" step="0.25" placeholder="Euro" oninput="pesoEuro(this.value)" onchange="pesoEuro(this.value)">
-  </div>
-
-  <div class="divisa">
-    <div class="nombre">Real</div> 
-    <input id="inputReales" type="number" step="0.25" placeholder="Reales" oninput="pesoReal(this.value)" onchange="pesoReal(this.value)">
-  </div>
 <!-- Services-->
 <section class="page-section" id="services">
   <div class="container">
       <div class="text-center">
           <h2 class="section-heading text-uppercase">Crypto</h2>
-          <h3 class="section-subheading text-muted">All Crypto.</h3>
+          <h3 class="section-subheading text-muted">Noticias</h3>
       </div>
       <div class="row text-center">
           <div class="col-md-4">
@@ -147,25 +117,24 @@
                   <i class="fas fa-circle fa-stack-2x text-primary"></i>
                   <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="my-3">Bitcoin</h4>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
+              <h4 class="my-3" id="bitcoin">Bitcoin</h4>
+              <p class="text-muted">Portugal se ha convertido en los últimos meses en un paraíso accidental para el bitcoin y los inversores en criptomonedas por su política fiscal, ya que el gobierno de Marcelo Rebelo de Sousa ha impuesto escasas reglas a estos activos, como por ejemplo una exención de impuestos sobre las divisas criptográficas. A medida que los gobiernos encadenan poco a poco la criptoindustria con regulaciones y obligaciones, Portugal está cada vez más solo en Europa y surgen numerosas dudas sobre cuánto tiempo podrá mantener su laxitud hacia las monedas digitales.</div>
           <div class="col-md-4">
               <span class="fa-stack fa-4x">
                   <i class="fas fa-circle fa-stack-2x text-primary"></i>
                   <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="my-3">Etherium</h4>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
+              <h4 class="my-3" id="etherium">Etherium</h4>
+              <p class="text-muted">El desplome en la cotización general de las criptomonedas amplió el debate acerca de la viabilidad de las mismas como medio de transacción y de ahorro. Lo cierto es que los especialistas marcan que monedas como Bitcoin y Ethereum han sido construidas con cimientos más sólidos que otras, lo que determinó la diferencia de impacto que tuvieron las unas con las otras.</div>
           <div class="col-md-4">
               <span class="fa-stack fa-4x">
                   <i class="fas fa-circle fa-stack-2x text-primary"></i>
                   <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="my-3">NFT</h4>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
+              <h4 class="my-3" id="nft">NFT</h4>
+              <p class="text-muted">Desde hoy, lunes 9 de mayo, la red social Instagram comienza las pruebas piloto para la incorporación de tokens no fungibles (NFT) a su plataforma. En caso de avanzar con ello, los usuarios podrían exhibir sus NFT de Ethereum, Polygon, Solana y Flow sin costos en su perfil, tal como ya se puede hacer en Twitter.
+
+                Según pudo confirmar CoinDesk, las primeras pruebas se realizarán con tokens aficionados de residentes de Estados Unidos. Se detalla, además, que la intención de Instagram es soportar el uso de wallets como MetaMask para poder utilizar los NFT en la red social.</div>
       </div>
   </div>
 </section>
@@ -184,11 +153,11 @@
                       <div class="portfolio-hover">
                           <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                       </div>
-                      <img class="img-fluid" src="img/1 (1).jpg" alt="..." />
+                      <img class="img-fluid" src="img/1 (2).jpg" alt="..." />
                   </a>
                   <div class="portfolio-caption">
-                      <div class="portfolio-caption-heading">Prestamos</div>
-                      <div class="portfolio-caption-subheading text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, repellendus?</div>
+                      <div class="portfolio-caption-heading"><h2>Conversor de moneda</h2></div>
+                      <div class="portfolio-caption-subheading text-muted">Todas las monedas del mundo!</div>
                   </div>
               </div>
           </div>
@@ -199,11 +168,11 @@
                       <div class="portfolio-hover">
                           <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                       </div>
-                      <img class="img-fluid" src="img/1 (2).jpg" alt="..." />
+                      <img class="img-fluid" src="img/1 (3).jpg" alt="..." />
                   </a>
                   <div class="portfolio-caption">
-                      <div class="portfolio-caption-heading">Viajas? Consulta el cambio</div>
-                      <div class="portfolio-caption-subheading text-muted">Dolares - Euro - Libra</div>
+                      <div class="portfolio-caption-heading"><h2>Bitcoin a Dolar</h2></div>
+                      <div class="portfolio-caption-subheading text-muted">Valor del Bitcoin en U$S</div>
                   </div>
               </div>
           </div>
@@ -214,11 +183,11 @@
                       <div class="portfolio-hover">
                           <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                       </div>
-                      <img class="img-fluid" src="img/1 (3).jpg" alt="..." />
+                      <img class="img-fluid" src="img/1 (4).jpg" alt="..." />
                   </a>
                   <div class="portfolio-caption">
-                      <div class="portfolio-caption-heading">Todo sobre CRYPTO</div>
-                      <div class="portfolio-caption-subheading text-muted">bitcoin - etherium - cortana</div>
+                      <div class="portfolio-caption-heading"><h2>Conversor de moneda en simultaneo</h2></div>
+                      <div class="portfolio-caption-subheading text-muted">Pesos - Dolar - Euro - Real</div>
                   </div>
               </div>
           </div>
@@ -294,9 +263,15 @@
       <div class="row align-items-center">
           <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2022</div>
           <div class="col-lg-4 my-3 my-lg-0">
-              <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-              <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-bitcoin" viewBox="0 0 16 16">
+                <path d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25L5.5 13zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312 0 .871-.575 1.362-1.877 1.362h-1.28V4.487zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524 0 .953-.626 1.45-2.158 1.45H6.927V8.539z"/>
+              </svg></i></a>
+              <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"/>
+              </svg></i></a>
+              <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-euro" viewBox="0 0 16 16">
+                <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/>
+              </svg></i></a>
           </div>
           <div class="col-lg-4 text-lg-end">
               <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
@@ -468,12 +443,14 @@
 </div>
 <!-- Portfolio item 2 modal popup-->
 <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          
-          <div class="container">
-              <div class="row justify-content-center">
-                  <div class="col-lg-8">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                          <h2>Conversor de Bitcoin</h2>
+                          <p>Precio actualizado de bitcoin a precio Dolar</p>
+                          <img class="img-fluid d-block mx-auto" src="./img/pngwing.com (2).png" alt="..." />
                     <main>
                         1 Bitcoin
                         <div class="coin-container" id="bitcoin">
@@ -495,30 +472,34 @@
 <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
           <div class="container">
               <div class="row justify-content-center">
                   <div class="col-lg-8">
                       <div class="modal-body">
                           <!-- Project details-->
-                          <h2 class="text-uppercase">Project Name</h2>
-                          <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                          <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
-                          <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                          <ul class="list-inline">
-                              <li>
-                                  <strong>Client:</strong>
-                                  Finish
-                              </li>
-                              <li>
-                                  <strong>Category:</strong>
-                                  Identity
-                              </li>
-                          </ul>
-                          <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                              <i class="fas fa-xmark me-1"></i>
-                              Close Project
-                          </button>
+                          <h2 class="text-uppercase">Cambio de moneda</h2>
+                          <p class="item-intro text-muted">Las monedas mas utilizadas en tu pais.</p>
+                          <img class="img-fluid d-block mx-auto" src="./img/cambio.jpg" alt="..." />
+                          <div class="divisa">
+                            <div class="nombre">Pesos ($)</div>
+                            
+                            <input id="inputEuros" type="number" placeholder="Peso" oninput="pesosDolares(this.value)" onchange="pesosDolares(this.value)">
+                          </div>
+                        
+                          <div class="divisa">
+                            <div class="nombre">Dólares (u$s)</div>
+                            <input id="inputDolares" type="number" step="0.25" placeholder="Dolares" oninput="dolaresPesos(this.value)" onchange="dolaresPesos(this.value)">
+                          </div>
+                        
+                          <div class="divisa">
+                            <div class="nombre">Euro</div>
+                            <input id="inputEuro" type="number" step="0.25" placeholder="Euro" oninput="pesoEuro(this.value)" onchange="pesoEuro(this.value)">
+                          </div>
+                        
+                          <div class="divisa">
+                            <div class="nombre">Real</div> 
+                            <input id="inputReales" type="number" step="0.25" placeholder="Reales" oninput="pesoReal(this.value)" onchange="pesoReal(this.value)">
+                          </div>
                       </div>
                   </div>
               </div>

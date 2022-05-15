@@ -94,25 +94,29 @@ body {
   width: 150px;
 }
 .moneda{
-  padding: 40px 0;
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .moneda select{
-  padding: 10px 20px 10px 10px;
-  border: 1px solid #dedede;
+  padding: 10px 10px 10px 10px;
+  border: 2px solid #060606;
+  border-radius: 10px;
   font-size: 16px;
+  background: #a7a7a7;
+  color: #323232;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
 
 .moneda input {
-  border: 0;
-  font-size: 30px;
-  text-align: right;
+  border: -2;
+  font-size: 20px;
+  text-align: center;
+  background: #bacbe6;
 }
 
 .taza-cambio-container{
@@ -141,7 +145,7 @@ select:focus, input:focus, button:focus{
 
 main {
   max-width: 250px;
-  margin: 100px auto;
+  margin: 50px auto;
 }
 
 .coin-container {
@@ -230,6 +234,7 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: calc(1.325rem + 0.9vw);
+  padding-top: 20px;
 }
 @media (min-width: 1200px) {
   h2, .h2 {
@@ -254,6 +259,9 @@ h4, .h4 {
     font-size: 1.5rem;
   }
 }
+
+
+
 
 h5, .h5 {
   font-size: 1.25rem;
